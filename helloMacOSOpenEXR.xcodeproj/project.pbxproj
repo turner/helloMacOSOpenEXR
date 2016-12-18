@@ -8,7 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		4F6437F21E072F51006F4410 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6437F11E072F51006F4410 /* main.swift */; };
+		4F6438021E072FA2006F4410 /* libz.1.2.8.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6438011E072FA2006F4410 /* libz.1.2.8.tbd */; };
+		4F6438031E072FA6006F4410 /* libmacOSOpenEXRLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6437FD1E072F7C006F4410 /* libmacOSOpenEXRLibrary.a */; };
+		4F6438051E072FAF006F4410 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6438041E072FAF006F4410 /* Foundation.framework */; };
+		4F6438091E07321F006F4410 /* pokeOpenEXR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F6438081E07321F006F4410 /* pokeOpenEXR.cpp */; };
+		4F64380C1E0732E0006F4410 /* wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F64380A1E0732E0006F4410 /* wrapper.cpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F6437FC1E072F7C006F4410 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F6437F81E072F7C006F4410 /* macOSOpenEXRLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4FD320DD1E05937E00F6EB1E;
+			remoteInfo = macOSOpenEXRLibrary;
+		};
+		4F6437FE1E072F95006F4410 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F6437F81E072F7C006F4410 /* macOSOpenEXRLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FD320DC1E05937E00F6EB1E;
+			remoteInfo = macOSOpenEXRLibrary;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4F6437EC1E072F51006F4410 /* CopyFiles */ = {
@@ -25,6 +47,14 @@
 /* Begin PBXFileReference section */
 		4F6437EE1E072F51006F4410 /* helloMacOSOpenEXR */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = helloMacOSOpenEXR; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F6437F11E072F51006F4410 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4F6437F81E072F7C006F4410 /* macOSOpenEXRLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = macOSOpenEXRLibrary.xcodeproj; path = ../../macOSOpenEXRLibrary/macOSOpenEXRLibrary.xcodeproj; sourceTree = "<group>"; };
+		4F6438011E072FA2006F4410 /* libz.1.2.8.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.8.tbd; path = usr/lib/libz.1.2.8.tbd; sourceTree = SDKROOT; };
+		4F6438041E072FAF006F4410 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4F6438071E07321E006F4410 /* helloMacOSOpenEXR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "helloMacOSOpenEXR-Bridging-Header.h"; sourceTree = "<group>"; };
+		4F6438081E07321F006F4410 /* pokeOpenEXR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pokeOpenEXR.cpp; sourceTree = "<group>"; };
+		4F64380A1E0732E0006F4410 /* wrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
+		4F64380E1E07359B006F4410 /* dusk.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = dusk.exr; sourceTree = "<group>"; };
+		4F64380F1E07359B006F4410 /* namespaceAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = namespaceAlias.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6438021E072FA2006F4410 /* libz.1.2.8.tbd in Frameworks */,
+				4F6438051E072FAF006F4410 /* Foundation.framework in Frameworks */,
+				4F6438031E072FA6006F4410 /* libmacOSOpenEXRLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +76,7 @@
 			children = (
 				4F6437F01E072F51006F4410 /* helloMacOSOpenEXR */,
 				4F6437EF1E072F51006F4410 /* Products */,
+				4F6438001E072FA2006F4410 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +91,32 @@
 		4F6437F01E072F51006F4410 /* helloMacOSOpenEXR */ = {
 			isa = PBXGroup;
 			children = (
+				4F6437F81E072F7C006F4410 /* macOSOpenEXRLibrary.xcodeproj */,
+				4F64380E1E07359B006F4410 /* dusk.exr */,
+				4F64380F1E07359B006F4410 /* namespaceAlias.h */,
 				4F6437F11E072F51006F4410 /* main.swift */,
+				4F6438071E07321E006F4410 /* helloMacOSOpenEXR-Bridging-Header.h */,
+				4F64380A1E0732E0006F4410 /* wrapper.cpp */,
+				4F6438081E07321F006F4410 /* pokeOpenEXR.cpp */,
 			);
 			path = helloMacOSOpenEXR;
+			sourceTree = "<group>";
+		};
+		4F6437F91E072F7C006F4410 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F6437FD1E072F7C006F4410 /* libmacOSOpenEXRLibrary.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F6438001E072FA2006F4410 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F6438041E072FAF006F4410 /* Foundation.framework */,
+				4F6438011E072FA2006F4410 /* libz.1.2.8.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -76,6 +133,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4F6437FF1E072F95006F4410 /* PBXTargetDependency */,
 			);
 			name = helloMacOSOpenEXR;
 			productName = helloMacOSOpenEXR;
@@ -95,6 +153,7 @@
 					4F6437ED1E072F51006F4410 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = NCTVS5F8E2;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -109,6 +168,12 @@
 			mainGroup = 4F6437E51E072F51006F4410;
 			productRefGroup = 4F6437EF1E072F51006F4410 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4F6437F91E072F7C006F4410 /* Products */;
+					ProjectRef = 4F6437F81E072F7C006F4410 /* macOSOpenEXRLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4F6437ED1E072F51006F4410 /* helloMacOSOpenEXR */,
@@ -116,16 +181,36 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		4F6437FD1E072F7C006F4410 /* libmacOSOpenEXRLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmacOSOpenEXRLibrary.a;
+			remoteRef = 4F6437FC1E072F7C006F4410 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4F6437EA1E072F51006F4410 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4F6437F21E072F51006F4410 /* main.swift in Sources */,
+				4F64380C1E0732E0006F4410 /* wrapper.cpp in Sources */,
+				4F6438091E07321F006F4410 /* pokeOpenEXR.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F6437FF1E072F95006F4410 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = macOSOpenEXRLibrary;
+			targetProxy = 4F6437FE1E072F95006F4410 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4F6437F31E072F51006F4410 /* Debug */ = {
@@ -219,8 +304,12 @@
 		4F6437F61E072F51006F4410 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NCTVS5F8E2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "helloMacOSOpenEXR/helloMacOSOpenEXR-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -228,8 +317,11 @@
 		4F6437F71E072F51006F4410 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NCTVS5F8E2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "helloMacOSOpenEXR/helloMacOSOpenEXR-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
