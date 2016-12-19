@@ -21,13 +21,12 @@ using namespace Imath;
 void readRgba (const char fileName[], Array2D<Rgba> &pixels);
 void readHeader (const char fileName[]);
 
-void pokeOpenEXR() {
+void pokeOpenEXR(const char *exrFilename) {
 
-    const char *fileName = "dusk.exr";
-    readHeader(fileName);
+    readHeader(exrFilename);
 
     Array2D<Rgba> fileContents;
-    readRgba(fileName, fileContents);
+    readRgba(exrFilename, fileContents);
     
     cout << "fileContents(" << fileContents.width() << ", " << fileContents.height() << ")" << endl;
     

@@ -54,7 +54,6 @@
 		4F6438081E07321F006F4410 /* pokeOpenEXR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pokeOpenEXR.cpp; sourceTree = "<group>"; };
 		4F64380A1E0732E0006F4410 /* wrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wrapper.cpp; sourceTree = "<group>"; };
 		4F64380E1E07359B006F4410 /* dusk.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = dusk.exr; sourceTree = "<group>"; };
-		4F64380F1E07359B006F4410 /* namespaceAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = namespaceAlias.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +90,12 @@
 		4F6437F01E072F51006F4410 /* helloMacOSOpenEXR */ = {
 			isa = PBXGroup;
 			children = (
-				4F6437F81E072F7C006F4410 /* macOSOpenEXRLibrary.xcodeproj */,
-				4F64380E1E07359B006F4410 /* dusk.exr */,
-				4F64380F1E07359B006F4410 /* namespaceAlias.h */,
 				4F6437F11E072F51006F4410 /* main.swift */,
+				4F64380E1E07359B006F4410 /* dusk.exr */,
 				4F6438071E07321E006F4410 /* helloMacOSOpenEXR-Bridging-Header.h */,
 				4F64380A1E0732E0006F4410 /* wrapper.cpp */,
 				4F6438081E07321F006F4410 /* pokeOpenEXR.cpp */,
+				4F6437F81E072F7C006F4410 /* macOSOpenEXRLibrary.xcodeproj */,
 			);
 			path = helloMacOSOpenEXR;
 			sourceTree = "<group>";
@@ -345,6 +343,7 @@
 				4F6437F71E072F51006F4410 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

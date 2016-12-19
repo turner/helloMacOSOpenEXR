@@ -12,9 +12,9 @@
 // it can be called from C
 // (and Swift).
 
-void pokeOpenEXR();
+void pokeOpenEXR(const char *exrFileName);
 
-extern "C" void doit()
+extern "C" void doit(const char *fileName)
 {
-    pokeOpenEXR();
+    pokeOpenEXR(fileName);
 }

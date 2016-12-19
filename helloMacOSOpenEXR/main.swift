@@ -8,4 +8,5 @@
 
 import Foundation
 
-doit()
+let filename:String = "dusk.exr"
+doit(filename)
