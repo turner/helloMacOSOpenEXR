@@ -19,16 +19,13 @@ using namespace Imf;
 using namespace Imath;
 
 void readRgba (const char fileName[], Array2D<Rgba> &pixels);
-void readHeader (const char fileName[]);
 
-extern "C" void pokeOpenEXR(const char *exrFileName) {
-
-    readHeader(exrFileName);
+extern "C" void pokeOpenEXR(const char *exrFileName, long* width, long* height) {
 
     Array2D<Rgba> fileContents;
     readRgba(exrFileName, fileContents);
-    
-    cout << "fileContents(" << fileContents.width() << ", " << fileContents.height() << ")" << endl;
+    *width = fileContents.width();
+    *height = fileContents.height();
     
 }
 
@@ -51,32 +48,5 @@ void readRgba (const char fileName[], Array2D<Rgba> &pixels) {
 
     file.setFrameBuffer (&pixels[0][0] - dw.min.x - dw.min.y * width, 1, (size_t) width);
     file.readPixels (dw.min.y, dw.max.y);
-
-}
-
-void readHeader (const char fileName[]) {
-    //
-    // Read an image's header from a file, and if the header
-    // contains comments and camera transformation attributes,
-    // print the values of those attributes.
-    //
-    //	- open the file
-    //	- get the file header
-    //	- look for the attributes
-    //
-
-    RgbaInputFile file (fileName);
-
-    const StringAttribute *comments = file.header().findTypedAttribute <StringAttribute> ("comments");
-
-    const M44fAttribute *cameraTransform = file.header().findTypedAttribute <M44fAttribute> ("cameraTransform");
-
-    if (comments) {
-        cout << "comments\n   " << comments->value() << endl;
-    }
-
-    if (cameraTransform) {
-        cout << "cameraTransform\n" << cameraTransform->value() << flush;
-    }
 
 }
