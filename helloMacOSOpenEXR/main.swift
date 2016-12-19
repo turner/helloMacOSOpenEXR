@@ -9,4 +9,4 @@
 import Foundation
 
 let filename:String = "dusk.exr"
-doit(filename)
+pokeOpenEXR(filename)
