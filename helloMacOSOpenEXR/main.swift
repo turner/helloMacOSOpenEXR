@@ -12,7 +12,7 @@ let wp = UnsafeMutablePointer<CLong>.allocate(capacity: 1)
 let hp = UnsafeMutablePointer<CLong>.allocate(capacity: 1)
 let theBits:UnsafeMutablePointer<CUnsignedShort>
 
-let filename:String = "dusk.exr"
+let filename:String = "red.exr"
 theBits = pokeOpenEXR(filename, wp, hp)
 
 let width = wp.pointee
@@ -21,7 +21,9 @@ let height = hp.pointee
 let length = 4 * width * height
 let buffer = UnsafeBufferPointer(start: theBits, count: length);
 
-for index in 0 ..< 8 {
+print("unsigned short \(MemoryLayout<CUnsignedShort>.size)")
+
+for index in 0 ..< 4 * width {
     print("main \(index) \(buffer[ index ])")
 }
 
