@@ -20,12 +20,34 @@ using namespace Imath;
 
 void readRgba (const char fileName[], Array2D<Rgba> &pixels);
 
-extern "C" void pokeOpenEXR(const char *exrFileName, long* width, long* height) {
+extern "C" unsigned short * pokeOpenEXR(const char *exrFileName, long* width, long* height) {
 
     Array2D<Rgba> fileContents;
     readRgba(exrFileName, fileContents);
     *width = fileContents.width();
     *height = fileContents.height();
+    
+/*
+    base + x * xStride + y * yStride.
+    base, xStride, yStride are set to pixels, 1, width, respectively.
+    pixel (x,y) is at memory address: pixels + (1 * x) + (width * y).
+*/
+    
+    long xStride = 1;
+    long yStride = fileContents.width();
+    long index;
+    Rgba* rgbas = new Rgba [fileContents.width() * fileContents.height()];
+    
+    for (long y=0; y < fileContents.height(); y++) {
+        
+        for (long x=0; x < fileContents.width(); x++) {
+            
+            index = (x * xStride) + (y * yStride);
+            rgbas[ index ] = fileContents[ x ][ y ];
+        }
+    }
+    
+    return (unsigned short *)rgbas;
     
 }
 
