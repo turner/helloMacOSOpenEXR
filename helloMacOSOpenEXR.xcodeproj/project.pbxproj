@@ -88,10 +88,10 @@
 		4F6437F01E072F51006F4410 /* helloMacOSOpenEXR */ = {
 			isa = PBXGroup;
 			children = (
+				4F64380E1E07359B006F4410 /* dusk.exr */,
 				4F6438071E07321E006F4410 /* helloMacOSOpenEXR-Bridging-Header.h */,
 				4F6437F11E072F51006F4410 /* main.swift */,
 				4F6438081E07321F006F4410 /* pokeOpenEXR.cpp */,
-				4F64380E1E07359B006F4410 /* dusk.exr */,
 				4F6437F81E072F7C006F4410 /* macOSOpenEXRLibrary.xcodeproj */,
 			);
 			path = helloMacOSOpenEXR;

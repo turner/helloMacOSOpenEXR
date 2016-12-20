@@ -41,7 +41,8 @@ extern "C" unsigned short * pokeOpenEXR(const char *exrFileName, long* width, lo
     long a_offset = 3;
     long index;
     
-    unsigned short * rgbas = new unsigned short [4 * fileContents.width() * fileContents.height()];
+    long length = 4 * fileContents.width() * fileContents.height();
+    unsigned short * rgbas = new unsigned short [length];
     
     for (long y=0; y < fileContents.height(); y++) {
         
@@ -59,7 +60,9 @@ extern "C" unsigned short * pokeOpenEXR(const char *exrFileName, long* width, lo
     for (long i=0; i < 8; i++) {
         cout << "pokeOpenEXR " << i << " " << rgbas[ i ] << endl;
     }
-   
+    
+    cout << "pokeOpenEXR file " << exrFileName << " width " << fileContents.width() << " height " << fileContents.height() << " length of bit buffer " << length << endl;
+
     return (unsigned short *)rgbas;
     
 }

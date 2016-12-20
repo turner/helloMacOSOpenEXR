@@ -18,11 +18,11 @@ theBits = pokeOpenEXR(filename, wp, hp)
 let width = wp.pointee
 let height = hp.pointee
 
-print("file \(filename) width \(width) height \(height)\n")
-
-
-let buffer = UnsafeBufferPointer(start: theBits, count: width * height);
+let length = 4 * width * height
+let buffer = UnsafeBufferPointer(start: theBits, count: length);
 
 for index in 0 ..< 8 {
-    print("main \(index) \(buffer[ index ])\n")
+    print("main \(index) \(buffer[ index ])")
 }
+
+print("file \(filename) width \(width) height \(height) length of bit buffer  \(buffer.count)\n")
