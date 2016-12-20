@@ -21,6 +21,8 @@ let height = hp.pointee
 print("file \(filename) width \(width) height \(height)\n")
 
 
+let buffer = UnsafeBufferPointer(start: theBits, count: width * height);
 
-
-
+for index in 0 ..< 8 {
+    print("main \(index) \(buffer[ index ])\n")
+}

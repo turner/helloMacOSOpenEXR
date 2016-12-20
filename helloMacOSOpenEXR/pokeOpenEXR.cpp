@@ -33,20 +33,33 @@ extern "C" unsigned short * pokeOpenEXR(const char *exrFileName, long* width, lo
     pixel (x,y) is at memory address: pixels + (1 * x) + (width * y).
 */
     
-    long xStride = 1;
-    long yStride = fileContents.width();
+    long yStride = 4 * fileContents.width();
+    
+    long r_offset = 0;
+    long g_offset = 1;
+    long b_offset = 2;
+    long a_offset = 3;
     long index;
-    Rgba* rgbas = new Rgba [fileContents.width() * fileContents.height()];
+    
+    unsigned short * rgbas = new unsigned short [4 * fileContents.width() * fileContents.height()];
     
     for (long y=0; y < fileContents.height(); y++) {
         
+        long yOffset = y * yStride;
         for (long x=0; x < fileContents.width(); x++) {
             
-            index = (x * xStride) + (y * yStride);
-            rgbas[ index ] = fileContents[ x ][ y ];
+            index = x + yOffset;
+            rgbas[ r_offset + index ] = fileContents[ x ][ y ].r.bits();
+            rgbas[ g_offset + index ] = fileContents[ x ][ y ].g.bits();
+            rgbas[ b_offset + index ] = fileContents[ x ][ y ].b.bits();
+            rgbas[ a_offset + index ] = fileContents[ x ][ y ].a.bits();
         }
     }
     
+    for (long i=0; i < 8; i++) {
+        cout << "pokeOpenEXR " << i << " " << rgbas[ i ] << endl;
+    }
+   
     return (unsigned short *)rgbas;
     
 }
