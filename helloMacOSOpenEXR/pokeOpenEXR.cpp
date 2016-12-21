@@ -22,7 +22,7 @@ using namespace Imath;
 void readRgba (const char fileName[], Array2D<Rgba> &pixels);
 void readHeader (const char fileName[]);
 
-extern "C" unsigned short * pokeOpenEXR(const char *exrFileName, long* width, long* height) {
+extern "C" const unsigned short * pokeOpenEXR(const char *exrFileName, long* width, long* height) {
 
     readHeader(exrFileName);
 
@@ -63,11 +63,11 @@ extern "C" unsigned short * pokeOpenEXR(const char *exrFileName, long* width, lo
         }
     }
 
-    cout << "unsigned short " << sizeof(unsigned short) << endl;
+    cout << "pokeOpenEXR unsigned short " << sizeof(unsigned short) << endl;
 
-    for (long i=0; i < 4 * fileContents.width(); i++) {
-        cout << "pokeOpenEXR " << i << " " << rgbas[ i ] << endl;
-    }
+//    for (long i=0; i < 4 * fileContents.width(); i++) {
+//        cout << "pokeOpenEXR " << i << " " << rgbas[ i ] << endl;
+//    }
 
     cout << "pokeOpenEXR file " << exrFileName << " width " << fileContents.width() << " height " << fileContents.height() << " length of bit buffer " << length << endl;
 
@@ -113,7 +113,7 @@ void readHeader (const char fileName[]) {
     const ChannelList &channels = file.header().channels();
 
     for (ChannelList::ConstIterator i = channels.begin(); i != channels.end(); ++i)  {
-        cout << "channel type(" << i.channel().type << ") name("<<  i.name() << ")" << endl;
+        cout << "pokeOpenEXR.readHeader channel type(" << i.channel().type << ") name("<<  i.name() << ")" << endl;
     }
 
 }
