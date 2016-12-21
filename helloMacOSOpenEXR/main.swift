@@ -12,7 +12,8 @@ let wp = UnsafeMutablePointer<CLong>.allocate(capacity: 1)
 let hp = UnsafeMutablePointer<CLong>.allocate(capacity: 1)
 let theBits:UnsafeMutablePointer<CUnsignedShort>
 
-let filename:String = "red.exr"
+//let filename:String = "red.exr"
+let filename:String = "gourds.exr"
 theBits = pokeOpenEXR(filename, wp, hp)
 
 let width = wp.pointee
