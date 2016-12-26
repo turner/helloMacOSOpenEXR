@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4C8A7C8F8EBCCACB2136ECDD24FB683D3590B9B9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4C8A7C8F8EBCCACB2136ECDD24FB683D3590B9B9" : 9223372036854775807,
+    "8CEFBF749AFDF65CEB2916344BC034DE5592D37F" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1462EDB0-9263-4414-9C95-8FDCDF1DE31A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4C8A7C8F8EBCCACB2136ECDD24FB683D3590B9B9" : "helloMacOSOpenEXR\/",
+    "8CEFBF749AFDF65CEB2916344BC034DE5592D37F" : "macOSOpenEXRLibrary\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "helloMacOSOpenEXR",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "helloMacOSOpenEXR.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:turner\/helloMacOSOpenEXR.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4C8A7C8F8EBCCACB2136ECDD24FB683D3590B9B9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:turner\/macOSOpenEXRLibrary.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8CEFBF749AFDF65CEB2916344BC034DE5592D37F"
+    }
+  ]
+}

@@ -22,10 +22,10 @@ let height = hp.pointee
 let length = 4 * width * height
 let buffer = UnsafeBufferPointer(start: theBits, count: length);
 
-print("main unsigned short \(MemoryLayout<CUnsignedShort>.size)")
+//print("main unsigned short \(MemoryLayout<CUnsignedShort>.size)")
 
-//for index in 0 ..< 4 * width {
-//    print("main \(index) \(buffer[ index ])")
-//}
+for index in 0 ..< length {
+    print("main(\(index)) channel \(index % 4) \(buffer[ index ])")
+}
 
-print("main file \(filename) width \(width) height \(height) length of bit buffer  \(buffer.count)\n")
+//print("main file \(filename) width \(width) height \(height) length of bit buffer  \(buffer.count)\n")

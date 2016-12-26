@@ -12,6 +12,15 @@
 		4F6438031E072FA6006F4410 /* libmacOSOpenEXRLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6437FD1E072F7C006F4410 /* libmacOSOpenEXRLibrary.a */; };
 		4F6438051E072FAF006F4410 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6438041E072FAF006F4410 /* Foundation.framework */; };
 		4F6438091E07321F006F4410 /* pokeOpenEXR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F6438081E07321F006F4410 /* pokeOpenEXR.cpp */; };
+		4F823FDE1E10904F008075E8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F823FDD1E10904F008075E8 /* main.cpp */; };
+		4F823FEA1E10910C008075E8 /* libmacOSOpenEXRLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6437FD1E072F7C006F4410 /* libmacOSOpenEXRLibrary.a */; };
+		4F8240101E114EB0008075E8 /* blurImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8240031E114EB0008075E8 /* blurImage.cpp */; };
+		4F8240111E114EB0008075E8 /* EnvmapImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8240051E114EB0008075E8 /* EnvmapImage.cpp */; };
+		4F8240121E114EB0008075E8 /* makeCubeMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8240081E114EB0008075E8 /* makeCubeMap.cpp */; };
+		4F8240131E114EB0008075E8 /* resizeImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F82400B1E114EB0008075E8 /* resizeImage.cpp */; };
+		4F8240141E114EB0008075E8 /* readInputImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F82400C1E114EB0008075E8 /* readInputImage.cpp */; };
+		4F8240151E114EB0008075E8 /* makeLatLongMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F82400D1E114EB0008075E8 /* makeLatLongMap.cpp */; };
+		4F8240161E1158FE008075E8 /* libz.1.2.8.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6438011E072FA2006F4410 /* libz.1.2.8.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,17 +31,19 @@
 			remoteGlobalIDString = 4FD320DD1E05937E00F6EB1E;
 			remoteInfo = macOSOpenEXRLibrary;
 		};
-		4F6437FE1E072F95006F4410 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4F6437F81E072F7C006F4410 /* macOSOpenEXRLibrary.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4FD320DC1E05937E00F6EB1E;
-			remoteInfo = macOSOpenEXRLibrary;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4F6437EC1E072F51006F4410 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		4F823FD91E10904F008075E8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -51,6 +62,21 @@
 		4F6438041E072FAF006F4410 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4F6438071E07321E006F4410 /* helloMacOSOpenEXR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "helloMacOSOpenEXR-Bridging-Header.h"; sourceTree = "<group>"; };
 		4F6438081E07321F006F4410 /* pokeOpenEXR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pokeOpenEXR.cpp; sourceTree = "<group>"; };
+		4F823FDB1E10904F008075E8 /* helloEnvironmentMap */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = helloEnvironmentMap; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F823FDD1E10904F008075E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4F8240031E114EB0008075E8 /* blurImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = blurImage.cpp; sourceTree = "<group>"; };
+		4F8240041E114EB0008075E8 /* blurImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blurImage.h; sourceTree = "<group>"; };
+		4F8240051E114EB0008075E8 /* EnvmapImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EnvmapImage.cpp; sourceTree = "<group>"; };
+		4F8240061E114EB0008075E8 /* readInputImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readInputImage.h; sourceTree = "<group>"; };
+		4F8240071E114EB0008075E8 /* makeLatLongMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = makeLatLongMap.h; sourceTree = "<group>"; };
+		4F8240081E114EB0008075E8 /* makeCubeMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = makeCubeMap.cpp; sourceTree = "<group>"; };
+		4F8240091E114EB0008075E8 /* namespaceAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = namespaceAlias.h; sourceTree = "<group>"; };
+		4F82400A1E114EB0008075E8 /* makeCubeMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = makeCubeMap.h; sourceTree = "<group>"; };
+		4F82400B1E114EB0008075E8 /* resizeImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resizeImage.cpp; sourceTree = "<group>"; };
+		4F82400C1E114EB0008075E8 /* readInputImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = readInputImage.cpp; sourceTree = "<group>"; };
+		4F82400D1E114EB0008075E8 /* makeLatLongMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = makeLatLongMap.cpp; sourceTree = "<group>"; };
+		4F82400E1E114EB0008075E8 /* EnvmapImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvmapImage.h; sourceTree = "<group>"; };
+		4F82400F1E114EB0008075E8 /* resizeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resizeImage.h; sourceTree = "<group>"; };
 		4F8FB3EE1E09ED7A00D24452 /* red.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = red.exr; sourceTree = "<group>"; };
 		4FB2B7151E0A98D50083616D /* gourds.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = gourds.exr; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +92,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4F823FD81E10904F008075E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F8240161E1158FE008075E8 /* libz.1.2.8.tbd in Frameworks */,
+				4F823FEA1E10910C008075E8 /* libmacOSOpenEXRLibrary.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -73,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				4F6437F01E072F51006F4410 /* helloMacOSOpenEXR */,
+				4F823FDC1E10904F008075E8 /* helloEnvironmentMap */,
 				4F6437EF1E072F51006F4410 /* Products */,
 				4F6438001E072FA2006F4410 /* Frameworks */,
 			);
@@ -82,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				4F6437EE1E072F51006F4410 /* helloMacOSOpenEXR */,
+				4F823FDB1E10904F008075E8 /* helloEnvironmentMap */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +153,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4F823FDC1E10904F008075E8 /* helloEnvironmentMap */ = {
+			isa = PBXGroup;
+			children = (
+				4F823FDD1E10904F008075E8 /* main.cpp */,
+				4F8240091E114EB0008075E8 /* namespaceAlias.h */,
+				4F8240041E114EB0008075E8 /* blurImage.h */,
+				4F8240031E114EB0008075E8 /* blurImage.cpp */,
+				4F82400E1E114EB0008075E8 /* EnvmapImage.h */,
+				4F8240051E114EB0008075E8 /* EnvmapImage.cpp */,
+				4F8240061E114EB0008075E8 /* readInputImage.h */,
+				4F82400C1E114EB0008075E8 /* readInputImage.cpp */,
+				4F8240071E114EB0008075E8 /* makeLatLongMap.h */,
+				4F82400D1E114EB0008075E8 /* makeLatLongMap.cpp */,
+				4F82400A1E114EB0008075E8 /* makeCubeMap.h */,
+				4F8240081E114EB0008075E8 /* makeCubeMap.cpp */,
+				4F82400F1E114EB0008075E8 /* resizeImage.h */,
+				4F82400B1E114EB0008075E8 /* resizeImage.cpp */,
+			);
+			path = helloEnvironmentMap;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,11 +188,27 @@
 			buildRules = (
 			);
 			dependencies = (
-				4F6437FF1E072F95006F4410 /* PBXTargetDependency */,
 			);
 			name = helloMacOSOpenEXR;
 			productName = helloMacOSOpenEXR;
 			productReference = 4F6437EE1E072F51006F4410 /* helloMacOSOpenEXR */;
+			productType = "com.apple.product-type.tool";
+		};
+		4F823FDA1E10904F008075E8 /* helloEnvironmentMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F823FE11E10904F008075E8 /* Build configuration list for PBXNativeTarget "helloEnvironmentMap" */;
+			buildPhases = (
+				4F823FD71E10904F008075E8 /* Sources */,
+				4F823FD81E10904F008075E8 /* Frameworks */,
+				4F823FD91E10904F008075E8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = helloEnvironmentMap;
+			productName = helloEnvironmentMap;
+			productReference = 4F823FDB1E10904F008075E8 /* helloEnvironmentMap */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -151,6 +225,11 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = NCTVS5F8E2;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+					4F823FDA1E10904F008075E8 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = NCTVS5F8E2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -174,6 +253,7 @@
 			projectRoot = "";
 			targets = (
 				4F6437ED1E072F51006F4410 /* helloMacOSOpenEXR */,
+				4F823FDA1E10904F008075E8 /* helloEnvironmentMap */,
 			);
 		};
 /* End PBXProject section */
@@ -198,15 +278,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4F6437FF1E072F95006F4410 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = macOSOpenEXRLibrary;
-			targetProxy = 4F6437FE1E072F95006F4410 /* PBXContainerItemProxy */;
+		4F823FD71E10904F008075E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F8240151E114EB0008075E8 /* makeLatLongMap.cpp in Sources */,
+				4F8240141E114EB0008075E8 /* readInputImage.cpp in Sources */,
+				4F8240131E114EB0008075E8 /* resizeImage.cpp in Sources */,
+				4F8240101E114EB0008075E8 /* blurImage.cpp in Sources */,
+				4F823FDE1E10904F008075E8 /* main.cpp in Sources */,
+				4F8240111E114EB0008075E8 /* EnvmapImage.cpp in Sources */,
+				4F8240121E114EB0008075E8 /* makeCubeMap.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXTargetDependency section */
+/* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		4F6437F31E072F51006F4410 /* Debug */ = {
@@ -322,6 +408,22 @@
 			};
 			name = Release;
 		};
+		4F823FDF1E10904F008075E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = NCTVS5F8E2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4F823FE01E10904F008075E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = NCTVS5F8E2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -339,6 +441,15 @@
 			buildConfigurations = (
 				4F6437F61E072F51006F4410 /* Debug */,
 				4F6437F71E072F51006F4410 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F823FE11E10904F008075E8 /* Build configuration list for PBXNativeTarget "helloEnvironmentMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F823FDF1E10904F008075E8 /* Debug */,
+				4F823FE01E10904F008075E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -63,13 +63,13 @@ extern "C" const unsigned short * pokeOpenEXR(const char *exrFileName, long* wid
         }
     }
 
-    cout << "pokeOpenEXR unsigned short " << sizeof(unsigned short) << endl;
+//    cout << "pokeOpenEXR unsigned short " << sizeof(unsigned short) << endl;
 
 //    for (long i=0; i < 4 * fileContents.width(); i++) {
 //        cout << "pokeOpenEXR " << i << " " << rgbas[ i ] << endl;
 //    }
 
-    cout << "pokeOpenEXR file " << exrFileName << " width " << fileContents.width() << " height " << fileContents.height() << " length of bit buffer " << length << endl;
+//    cout << "pokeOpenEXR file " << exrFileName << " width " << fileContents.width() << " height " << fileContents.height() << " length of bit buffer " << length << endl;
 
     return (unsigned short *)rgbas;
 
