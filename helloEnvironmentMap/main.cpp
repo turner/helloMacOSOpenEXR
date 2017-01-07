@@ -29,7 +29,6 @@
 using namespace IMF;
 using namespace std;
 
-
 namespace {
     
     void
@@ -184,10 +183,7 @@ namespace {
     
 } // namespace
 
-
-int
-main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
     const char *inFile = 0;
     const char *outFile = 0;
     Envmap type = ENVMAP_CUBE;
